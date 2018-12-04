@@ -30,9 +30,6 @@ RUN a2enmod rewrite && a2enmod headers && a2enmod mime
 COPY ./php.ini /usr/local/etc/php/php.ini
 COPY ./vhost.conf /etc/apache2/sites-enabled/000-default.conf
 
-# Log dir
-RUN mkdir /var/www/log
-
 WORKDIR /var/www
 
 CMD apachectl -D FOREGROUND
