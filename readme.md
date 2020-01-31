@@ -28,4 +28,10 @@ $ docker push atillay/lemp-nginx
 ```
 $ docker build -t atillay/lemp-php ./lemp/php
 $ docker push atillay/lemp-php
+
+$ docker build --build-arg PHP_VERSION=7.3 -t atillay/lemp-php:7.3 ./lemp/php
+$ docker push atillay/lemp-php:7.3
+
+$ docker build --build-arg PHP_VERSION=7.2 -t atillay/lemp-php:7.2 ./lemp/php
+$ docker push atillay/lemp-php:7.2
 ```
