@@ -11,9 +11,10 @@ RUN apt-get update && apt-get install -y \
     libicu-dev g++ \
     libcurl4-openssl-dev \
     libxml2-dev \
-    mysql-client
+    mariadb-client
 
 ENV COMPOSER_ALLOW_SUPERUSER=1
+ENV COMPOSER_MEMORY_LIMIT=-1
 RUN curl -sS https://getcomposer.org/installer | php -- --install-dir=/usr/local/bin --filename=composer
 RUN composer --version
 
