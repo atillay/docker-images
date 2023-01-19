@@ -6,6 +6,12 @@ My custom Docker images
 ```
 $ docker build -t atillay/wordpress ./wordpress
 $ docker push atillay/wordpress
+
+$ docker build --build-arg PHP_VERSION=7.4 -t atillay/wordpress:7.4 ./wordpress
+$ docker push atillay/wordpress:7.4
+
+$ docker build --build-arg PHP_VERSION=7.3 -t atillay/wordpress:7.3 ./wordpress
+$ docker push atillay/wordpress:7.3
 ```
 
 ## CraftCMS 3
@@ -28,6 +34,9 @@ $ docker push atillay/lemp-nginx
 ```
 $ docker build -t atillay/lemp-php ./lemp/php
 $ docker push atillay/lemp-php
+
+$ docker build --build-arg PHP_VERSION=7.4 -t atillay/lemp-php:7.4 ./lemp/php
+$ docker push atillay/lemp-php:7.4
 
 $ docker build --build-arg PHP_VERSION=7.3 -t atillay/lemp-php:7.3 ./lemp/php
 $ docker push atillay/lemp-php:7.3
